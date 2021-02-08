@@ -11,7 +11,9 @@ rm -rf device/lge/us997/
 
 
 repo init -u https://github.com/PixelExtended/manifest -b eleven
-
+cd .repo
+git clone https://github.com/wolda-wolda/local_manifests.git -b lineage-18.1
+cd ..
 repo sync -c -q --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j$(nproc --all)
 source build/envsetup.sh
 
