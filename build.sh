@@ -1,6 +1,7 @@
-source scripts/sync.sh
-make clean
-export ALLOW_MISSING_DEPENDENCIES=true
-rm -rf packages/apps/Updater/
-lunch aosp_h870
-mka bacon -j12
+#!/bin/bash
+
+./sync.sh
+
+source build/envsetup.sh
+lunch potato_h870-userdebug
+brunch h870
